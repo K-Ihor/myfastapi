@@ -1,1 +1,1 @@
-web: uvicorn server:app --reload
+web: gunicorn -w 3 -k uvicorn.workers.UvicornWorker server:app
